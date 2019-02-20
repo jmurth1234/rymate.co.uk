@@ -1,3 +1,3 @@
 git pull
 hugo
-cp public/* ~/public_html/dev/
+cp -r public/* ~/public_html/dev/
