@@ -7,13 +7,19 @@ const crypto = require('crypto')
 const exec = require('child_process').exec
 
 http.createServer((req, res) => {
-    req.on('data', function (chunk) {
-        const sig = "sha1=" + crypto.createHmac('sha1', secret).update(chunk.toString()).digest('hex')
+  req.on('data', function (chunk) {
+    const sig = "sha1=" + crypto.createHmac('sha1', secret).update(chunk.toString()).digest('hex')
 
-        if (req.headers['x-hub-signature'] === sig) {
-            exec(`cd ${repo} && sh sync.sh`)
+    if (req.headers['x-hub-signature'] === sig) {
+      exec(`sh ${__dirname}/sync.sh`, (error, stdout, stderr) => {
+        console.log(`${stdout}`);
+        console.log(`${stderr}`);
+        if (error !== null) {
+          console.log(`exec error: ${error}`);
         }
-    });
+      });
+    }
+  });
 
-    res.end();
+  res.end();
 }).listen(port);
