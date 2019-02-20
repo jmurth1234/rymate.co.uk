@@ -1,4 +1,5 @@
 const secret = process.env.SECRET
+const port = process.env.PORT
 const repo = "~/site-source/"
 
 const http = require('http')
@@ -15,4 +16,4 @@ http.createServer((req, res) => {
     });
 
     res.end();
-}).listen(8080);
+}).listen(port);
