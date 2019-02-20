@@ -1,3 +1,4 @@
 baseURL = "https://rymate.co.uk/~rymate/dev"
 languageCode = "en-us"
 title = "Ryan's Site"
+subtitle = 'My Personal Blog and Portfolio'
