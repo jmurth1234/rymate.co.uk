@@ -3,7 +3,7 @@ type: post
 title: Issues releasing WinIRC 1.5
 date: 2017-08-24T16:38:09.000Z
 ---
-[WinIRC 1.5](https://www.microsoft.com/en-us/store/apps/winirc/9nblggh2p0rf) is finally making it's way to the Windows Store, with a host of new features &#8211; the main one being a refreshed UI. However, the release of the application has left much to be desired.
+[WinIRC 1.5](https://www.microsoft.com/en-us/store/apps/winirc/9nblggh2p0rf) is finally making it's way to the Windows Store, with a host of new features - the main one being a refreshed UI. However, the release of the application has left much to be desired.
 
 Just over two weeks ago, I pushed the final 1.5 changelog to the [WinIRC Github](https://github.com/rymate1234/WinIRC/commit/2c2cf7797e5a3b3cec1ede2bc55ec62f53085236#diff-4ac32a78649ca5bdd8e0ba38b7006a1e), as I was hoping in the next couple of days the release would be live on the Windows Store. As it turns out, this wasn't the case - I forgot to test it locally, and the Store based certification process marked two issues that needed to be fixed before it would be certified, specifically:
 
