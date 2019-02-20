@@ -1,12 +1,11 @@
-{{ $featured_image := .Params.featured_image }}
 <article>
   <h3>
-    <a href="{{.URL}}">
+    <a href="{{ .URL | relURL }}">
       {{ .Title }}
     </a>
   </h3>
   <div class="content">
     {{ .Summary }}
   </div>
-  <a href="{{.URL}}" >{{$.Param "read_more_copy" | default "Read More..." }}</a>
+  <a href="{{ .URL | relURL }}" >Read More...</a>
 </article>

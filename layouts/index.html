@@ -31,7 +31,7 @@
             {{ partial "summary.html" . }}
           {{ end }}
         </div>
-        <a href='/posts'>See More</a>
+        <a href='{{ "/posts" | relURL }}'>See More</a>
       </section>
     </main>
 {{ end }}

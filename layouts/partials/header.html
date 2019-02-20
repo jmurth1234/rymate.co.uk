@@ -2,7 +2,7 @@
   <ul>
     {{ $currentPage := . }}
     <li>
-      <a href="/" target="_blank">Home</a>
+      <a href='{{ "/" | relURL }}'>Home</a>
     </li>    
     {{ range .Site.Menus.main }}
       <li>
