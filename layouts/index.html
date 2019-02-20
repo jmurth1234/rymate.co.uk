@@ -1,0 +1,37 @@
+{{ define "main" }}
+  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+  {{ $mainSections := .Site.Params.mainSections | default (slice "posts") }}
+  {{/* Create a variable with that section to use in multiple places. */}}
+  {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{/* Check to see if the section is defined for ranging through it */}}
+  {{ $section_count := len $section }}
+  {{ $section_name := index (.Site.Params.mainSections) 0 }}
+
+    <main aria-role="main">
+      <header class="homepage-header">
+        <h1>{{.Title}}</h1>
+        {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+        {{ end }}
+      </header>
+      <div class="homepage-content">
+        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        {{.Content}}
+      </div>
+      <section class="grid">
+        {{ with .Site.GetPage "section" $section_name }}
+          <h2>
+            Latest {{ .Title }}
+          </h2>
+        {{ end }}
+
+        {{/* Range through the first $n_posts items of the section */}}
+        <div class="item">
+          {{ range (first 3 $section) }}
+            {{ partial "summary.html" . }}
+          {{ end }}
+        </div>
+        <a href='/posts'>See More</a>
+      </section>
+    </main>
+{{ end }}

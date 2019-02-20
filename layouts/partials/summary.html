@@ -1,0 +1,12 @@
+{{ $featured_image := .Params.featured_image }}
+<article>
+  <h3>
+    <a href="{{.URL}}">
+      {{ .Title }}
+    </a>
+  </h3>
+  <div class="content">
+    {{ .Summary }}
+  </div>
+  <a href="{{.URL}}" >{{$.Param "read_more_copy" | default "Read More..." }}</a>
+</article>
