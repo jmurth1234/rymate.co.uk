@@ -30,8 +30,10 @@
           {{ range (first 3 $section) }}
             {{ partial "summary.html" . }}
           {{ end }}
+
+          <a class="card" href='{{ "/posts" | relURL }}'>See More</a>
         </div>
-        <a href='{{ "/posts" | relURL }}'>See More</a>
+
       </section>
 
       <section class="grid">
@@ -44,8 +46,8 @@
           {{ range (first 3 (where .Pages "Section" "projects")) }}
             {{ partial "project_summary.html" . }}
           {{ end }}
+          <a class="card" href='{{ "/projects" | relURL }}'>See More</a>
         </div>
-        <a href='{{ "/projects" | relURL }}'>See More</a>
       </section>
 
     </main>

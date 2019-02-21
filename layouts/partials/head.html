@@ -1,1 +1,4 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $sass := resources.Get "site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
