@@ -35,16 +35,14 @@
       </section>
 
       <section class="grid">
-        {{ with .Site.GetPage "section" $section_name }}
-          <h2>
-            My Projects
-          </h2>
-        {{ end }}
+        <h2>
+          My Projects
+        </h2>
 
         {{/* Range through the first $n_posts items of the section */}}
         <div class="item">
-          {{ range (first 3 $section) }}
-            {{ partial "summary.html" . }}
+          {{ range (first 3 (where .Pages "Section" "projects")) }}
+            {{ partial "project_summary.html" . }}
           {{ end }}
         </div>
         <a href='{{ "/projects" | relURL }}'>See More</a>
