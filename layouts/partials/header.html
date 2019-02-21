@@ -1,3 +1,10 @@
+<header class="site-header">
+  <h1>Rymate</h1>
+  {{ with .Site.Params.subtitle }}
+  <span class="subtitle">{{.}}</span>
+  {{ end }}
+</header>
+
 <nav>
   <ul>
     {{ $currentPage := . }}

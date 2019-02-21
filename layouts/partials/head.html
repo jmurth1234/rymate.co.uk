@@ -2,3 +2,4 @@
 {{ $sass := resources.Get "site.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }} {{ end }}</title>
