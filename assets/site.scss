@@ -25,6 +25,20 @@ body {
   }
 }
 
+%flexNav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%navLink {
+  display: block;
+  padding: $siteGap;
+  text-decoration: none;
+}
+
 nav {
   width: 100%;
   background: $navBg;
@@ -34,18 +48,12 @@ nav {
   z-index: 10;
   
   ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @extend %flexNav;
   }
 
   a {
-    display: block;
-    padding: $siteGap;
+    @extend %navLink;
     color: #fff;
-    text-decoration: none;
   }
 
   a:hover {
@@ -81,8 +89,24 @@ nav {
 
 article {
   @extend %card;
+  display: flex;
+  flex-direction: column;
+
   h3 {
     margin: 0;
+  }
+
+  .content {
+    flex: 1 1 100%;
+  }
+
+  .projectLinks {
+    @extend %flexNav;
+
+    a {
+      @extend %navLink;
+      padding-left: 0;
+    }  
   }
 }
 
