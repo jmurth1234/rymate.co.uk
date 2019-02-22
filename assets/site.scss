@@ -25,6 +25,11 @@ body {
   }
 }
 
+header h1 {
+  padding: 0;
+  margin: 0;
+}
+
 %flexNav {
   display: flex;
   flex-direction: row;
@@ -92,21 +97,38 @@ article {
   display: flex;
   flex-direction: column;
 
-  h3 {
+  h3, h1 {
+    flex: 0 1 auto;
     margin: 0;
   }
 
+  time {
+    color: #444;
+    font-size: 14px;
+  }
+
   .content {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
   }
 
   .projectLinks {
     @extend %flexNav;
+    flex: 0 1 auto;
 
     a {
       @extend %navLink;
       padding-left: 0;
     }  
+  }
+}
+
+.pagination {
+  @extend %flexNav;
+  justify-content: center;
+  align-items: center;
+  a {
+    @extend %navLink;
+    flex: 1 1 auto;
   }
 }
 

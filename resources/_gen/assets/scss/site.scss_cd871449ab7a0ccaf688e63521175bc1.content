@@ -17,14 +17,18 @@ body {
   padding: 0;
   margin: 0; }
 
-nav ul, article .projectLinks {
+header h1 {
+  padding: 0;
+  margin: 0; }
+
+nav ul, article .projectLinks, .pagination {
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
   margin: 0; }
 
-nav a, article .projectLinks a {
+nav a, article .projectLinks a, .pagination a {
   display: block;
   padding: 10px;
   text-decoration: none; }
@@ -66,11 +70,26 @@ article {
   display: flex;
   flex-direction: column; }
 
-article h3 {
+article h3, article h1 {
+  flex: 0 1 auto;
   margin: 0; }
 
+article time {
+  color: #444;
+  font-size: 14px; }
+
 article .content {
-  flex: 1 1 100%; }
+  flex: 1 1 auto; }
+
+article .projectLinks {
+  flex: 0 1 auto; }
 
 article .projectLinks a {
   padding-left: 0; }
+
+.pagination {
+  justify-content: center;
+  align-items: center; }
+
+.pagination a {
+  flex: 1 1 auto; }
