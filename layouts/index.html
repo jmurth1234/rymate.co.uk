@@ -7,42 +7,42 @@
   {{ $section_count := len $section }}
   {{ $section_name := index (.Site.Params.mainSections) 0 }}
 
-    <main>
-      <div class="homepage-content">
-        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-        {{.Content}}
-      </div>
-      <section class="grid">
-        {{ with .Site.GetPage "section" $section_name }}
-          <h2>
-            Latest {{ .Title }}
-          </h2>
+  <main class="homepage">
+    <div class="homepage-content">
+      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+      {{.Content}}
+    </div>
+    <section class="grid">
+      {{ with .Site.GetPage "section" $section_name }}
+        <h2>
+          Latest {{ .Title }}
+        </h2>
+      {{ end }}
+
+      {{/* Range through the first $n_posts items of the section */}}
+      <div class="item">
+        {{ range (first 3 $section) }}
+          {{ partial "summary.html" . }}
         {{ end }}
 
-        {{/* Range through the first $n_posts items of the section */}}
-        <div class="item">
-          {{ range (first 3 $section) }}
-            {{ partial "summary.html" . }}
-          {{ end }}
+        <a class="card" href='{{ "/posts" | relURL }}'>See More</a>
+      </div>
 
-          <a class="card" href='{{ "/posts" | relURL }}'>See More</a>
-        </div>
+    </section>
 
-      </section>
+    <section class="grid">
+      <h2>
+        My Projects
+      </h2>
 
-      <section class="grid">
-        <h2>
-          My Projects
-        </h2>
+      {{/* Range through the first $n_posts items of the section */}}
+      <div class="item">
+        {{ range (first 3 (where .Pages "Section" "projects")) }}
+          {{ partial "project_summary.html" . }}
+        {{ end }}
+        <a class="card" href='{{ "/projects" | relURL }}'>See More</a>
+      </div>
+    </section>
 
-        {{/* Range through the first $n_posts items of the section */}}
-        <div class="item">
-          {{ range (first 3 (where .Pages "Section" "projects")) }}
-            {{ partial "project_summary.html" . }}
-          {{ end }}
-          <a class="card" href='{{ "/projects" | relURL }}'>See More</a>
-        </div>
-      </section>
-
-    </main>
+  </main>
 {{ end }}
