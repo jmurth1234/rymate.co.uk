@@ -8,11 +8,12 @@ category: Bukkit Plugin
 status: inactive
 date: 2019-02-21T02:50:40.317Z
 ---
-This plugin is a Superperms Manager for Bukkit! bPermissions focuses on being unique from the rest of the Permission managers. It's very simple to set up and use, it's lightning fast, and  fully featured.
+This plugin was the largest project I actively maintained when I was focused on
+it, both in scale and number of users, with the plugin having over 500k 
+downloads before I took over in 2013. This was also my first experience 
+inheriting an older codebase I'd never really touched before.
 
-**Some features:**
+### Tech Used
 
-* bPermissions has a gui client specifically designed to make running a server so easy that you'll forget that you ever used any other permissions plugin. Get it here!
-* bPermissions has a unique command structure, never before seen in a permission manager. It's best used for adding lots of nodes to a user or group from the console or in-game, less typing
-* bPermissions has everything you would expect from a Permissions manager. Prefix and suffix support, inheritance, per-player permissions, multiworld support, promotion/demotion tracks, and even group priorities for multi-group setups.
-* Note - bPermissions only defines prefixes and suffixes. You need a chat plugin such as bChatManager for them to show up in chat.
+ - **Development**: Java / Bukkit API
+ - **CI**: Various jenkins servers
