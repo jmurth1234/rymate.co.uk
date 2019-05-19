@@ -10,12 +10,15 @@
       {{- .Content -}}
     </section>
     <section class="list">
-      {{ range .Paginator.Pages }}
-        <div class="item">
-          {{- partial "project_summary.html" . -}}
-        </div>
+      {{ range .Paginator.Pages.GroupByParam "status" }}
+      <h3>{{ humanize .Key }}</h3>
+        {{ range .Pages.ByTitle }}
+          <div class="item">
+            {{- partial "project_summary.html" . -}}
+          </div>
+        {{ end }}
       {{ end }}
-    </section>
+      </section>
     {{- template "_internal/pagination.html" . -}}
   </main>
 {{ end }}
