@@ -16,3 +16,4 @@ Back when I owned a Minecraft server, I wanted to give admins a way of monitorin
 
  - **Development (backend)**: Java, SparkJava web framework, distributed as bukkit plugin
  - **Development (frontend)**: SCSS for styles, mostly jQuery for JS
+ - **Development (mobile)**: Although other apps were never made, I did make a basic UWP frontend 
