@@ -3,3 +3,8 @@ languageCode = "en-us"
 title = "Ryan's Site"
 [params]
 subtitle = "Just my personal hugo site."
+
+[taxonomies]
+  category = "categories"
+  status = "status"
+  tag = "tags"
