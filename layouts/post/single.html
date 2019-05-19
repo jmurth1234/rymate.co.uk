@@ -8,14 +8,6 @@
 <main>
   <article>
     <header>
-      <p class="section">
-        {{/*
-          CurrentSection allows us to use the section title instead of inferring from the folder.
-          https://gohugo.io/variables/page/#section-variables-and-methods
-          */}}
-        {{ $name := .Params.Category | default "Posts" }}
-        {{ with $name }}{{. | upper }}{{end}}
-      </p>
       <h1>
         {{- .Title -}}
       </h1>

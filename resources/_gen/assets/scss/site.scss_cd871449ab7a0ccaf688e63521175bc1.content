@@ -86,7 +86,8 @@ article h3, article h1 {
   flex: 0 1 auto;
   margin: 0; }
 
-article time {
+article time, article .status {
+  margin: 0;
   color: #444;
   font-size: 14px; }
 
