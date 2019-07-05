@@ -26,7 +26,7 @@ pre, code {
 .site-header {
   background: $headerBg;
   color: #fff;
-  padding: 10px;
+  padding: $siteGap;
 
   h1 {
     padding: 0;
