@@ -1,6 +1,6 @@
 <article>
   <h3>
-    <a href="{{ .URL }}">
+    <a href="{{ .Permalink }}">
       {{ .Title }}
     </a>
   </h3>
@@ -10,6 +10,6 @@
   <ul class="projectLinks">
     <li><a href="{{ .Params.source }}">Source Code</a></li>
     <li><a href="{{ .Params.site }}">Project Site</a></li>
-    <li><a href="{{ .URL }}">Read More...</a></li>
+    <li><a href="{{ .Permalink }}">Read More...</a></li>
   </ul>
 </article>

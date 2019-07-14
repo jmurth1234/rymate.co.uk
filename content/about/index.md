@@ -8,11 +8,16 @@ menu: "main"
 ---
 Hello, and welcome!
 
-I&#8217;m Ryan Murthick, and this is my personal website.
+I'm Ryan Murthick, and this is my personal website.
 
-Here&#8217;s a few links:
+I'm a software engineer currently working remotely at Clock, the company I did 
+a year's placement at, and will be starting my final year of university soon.
 
-  * <span style="line-height: 14px;"><a href="http://github.com/rymate1234">My github.</a> A collection of projects, abandoned projects and things I never got round to doing</span>
-  * [My twitter.][1] I occasionally tweet.
+Although I've historically done a lot of C# / Java development, I've increasingly
+ended up doing web development.
 
- [1]: http://twitter.com/rymate1234
+Here's some other places you can find me:
+
+  * [My Github](http://github.com/rymate1234"http://github.com/rymate1234): All of my open source projects, plus some unfinished ideas
+  * [My twitter]( http://twitter.com/rymate1234): I occasionally tweet.
+

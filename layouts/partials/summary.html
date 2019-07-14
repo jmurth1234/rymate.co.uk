@@ -1,14 +1,14 @@
 <article>
   <h3>
-    <a href="{{ .URL | relURL }}">
+    <a href="{{ .Permalink | relURL }}">
       {{ .Title }}
     </a>
   </h3>
-  <div class="content">
+  <div class="content summary">
     {{ .Summary }}
   </div>
 
   <ul class="projectLinks">
-    <li><a href="{{ .URL | relURL }}" >Read More...</a></li>
+    <li><a href="{{ .Permalink | relURL }}" >Read More...</a></li>
   </ul>
 </article>

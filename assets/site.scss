@@ -168,3 +168,21 @@ label {
 input {
   padding: $siteGap;
 }
+
+.summary {
+  position: relative;
+  line-height: 28px;
+  max-height: calc(28px * 5);
+  overflow: hidden;
+}
+
+.summary:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 28px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}

@@ -11,7 +11,7 @@
         {{- .Title -}}
       </h1>
       <p class="status">
-        Status: <span>{{- humanize .Status -}}</span>
+        Status: <span>{{- humanize .Params.status -}}</span>
       </p>
       {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
       <span> - {{ .ReadingTime}} minutes read</span>
