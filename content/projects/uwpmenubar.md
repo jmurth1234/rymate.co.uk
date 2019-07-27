@@ -1,6 +1,6 @@
 ---
 type: project
-title: UWPMenuBar
+title: UWP Menu Bar
 description: >-
   A traditional menu bar style component for UWP apps. Created for WinIRC,
   replaced by an official menu bar for UWP 

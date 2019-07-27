@@ -10,7 +10,7 @@
       {{- .Content -}}
     </section>
     <section class="list">
-      {{ range .Paginator.Pages.GroupByParam "status" }}
+      {{ range .Pages.GroupByParam "status" }}
       <h3>{{ humanize .Key }}</h3>
         {{ range .Pages.ByTitle }}
           <div class="item">
@@ -19,6 +19,5 @@
         {{ end }}
       {{ end }}
       </section>
-    {{- template "_internal/pagination.html" . -}}
   </main>
 {{ end }}
