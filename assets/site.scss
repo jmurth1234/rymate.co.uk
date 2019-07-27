@@ -20,7 +20,9 @@ body {
 
 pre, code {
   font-family: 'Roboto Mono', monospace;
-  background: #eee;
+  background: #272822;
+  overflow: auto;
+  font-size: 14px;
 }
 
 .site-header {
