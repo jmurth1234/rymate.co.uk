@@ -8,7 +8,7 @@ category: Android App
 status: legacy
 date: '2019-07-27'
 ---
-The first Android app I made. More of a learning experience than anything else, this was essentially me learning the Android platform
+The first Android app I made. More of a learning experience than anything else, this was essentially a simple tutorial thhat I extended with design updates and added categories. No longer maintained but still on the Play Store
 
 ### Tech Used
 
