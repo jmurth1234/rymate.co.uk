@@ -2,6 +2,7 @@
 type: post
 title: Introducing the rebuild of this site
 date: 2019-07-05T16:30:18.425Z
+description: WordPress has served me well for a good few years now, but I decided last year that it's time for an overhaul
 ---
 WordPress has served me well for a good few years now, but I decided last year that it's time for an overhaul of my site to use more modern web development practices and for me to have much more control over it. I also wanted much more emphasis on the projects I've done, rather than have them buried as a small link on a subsection of the site.
 

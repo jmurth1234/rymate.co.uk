@@ -14,6 +14,7 @@ body {
 pre, code {
   font-family: roboto mono,monospace;
   background: #272822;
+  color: #eee;
   overflow: auto;
   font-size: 14px; }
 
