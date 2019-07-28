@@ -5,12 +5,7 @@
     </a>
   </h3>
   <div class="content summary">
-    {{ with .Description }}
-      {{ $.Scratch.Set "summary" (markdownify .) }}
-    {{ else }}
-      {{ $.Scratch.Set "summary" ((delimit (findRE "(<p.*?>.*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | replaceRE "&amp;" "&" | safeHTML) }}
-    {{ end }}
-    {{ $.Scratch.Get "summary" }}
+    {{ ((delimit (findRE "(<p.*?>.*?</p>\\s*)+" .Content) "[&hellip;] ") | plainify | replaceRE "&amp;" "&" | safeHTML) }}
   </div>
 
   <ul class="projectLinks">
