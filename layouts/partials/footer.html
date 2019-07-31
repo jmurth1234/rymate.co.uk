@@ -1,4 +1,9 @@
-<!-- Include quicklink from dist -->
+<!-- Include instantclick -->
 <script src="/instantclick.min.js" data-no-instant></script>
 <!-- Initialize (you can do this whenever you want) -->
-<script data-no-instant>InstantClick.init();</script>
+<script data-no-instant>
+  // if not IE
+  if (!(/*@cc_on!@*/ false || document.documentMode)) {
+    InstantClick.init();
+  }
+</script>

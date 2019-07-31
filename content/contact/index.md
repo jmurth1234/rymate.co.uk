@@ -29,12 +29,3 @@ If you want something more real time, you can also chat to me on Esper -- just <
   </label>
   <input type="submit" value="Send">
 </form>
-
-<script src="https://unpkg.com/tinymce@4.6.4/tinymce.min.js"></script>
-<script>
-tinymce.init({
-  selector:'textarea',
-  theme: 'modern',
-  height: 400,
-});
-</script>

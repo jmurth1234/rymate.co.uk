@@ -1,6 +1,7 @@
 $headerBg: #1A237E;
 $navBg: #32408f;
 $siteGap: 10px;
+$cardSize: 280px;
 
 * {
   box-sizing: border-box;
@@ -16,6 +17,16 @@ body {
   line-height: 1.6;
   font-size: 18px;
   color: #222;
+  overflow-x: hidden;
+  background: #eeeeee;
+}
+
+main {
+  display: block; // IE11 workaround
+}
+
+a {
+  text-decoration: none;
 }
 
 pre, code {
@@ -29,7 +40,7 @@ pre, code {
 .site-header {
   background: $headerBg;
   color: #fff;
-  padding: $siteGap;
+  padding: $siteGap * 2;
 
   h1 {
     padding: 0;
@@ -63,7 +74,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  
+  overflow: auto;
+
   ul {
     @extend %flexNav;
   }
@@ -71,6 +83,7 @@ nav {
   a {
     @extend %navLink;
     color: #fff;
+    margin-left: $siteGap;
   }
 
   a:hover {
@@ -79,10 +92,13 @@ nav {
 }
 
 #content {
+  padding-left: $siteGap;
+  margin-right: -$siteGap * 2;
+
   .homepage {
-    padding: $siteGap;
     max-width: 1280px;
-    margin: 0 auto;  
+    padding: $siteGap;
+    margin: 0 auto;
   }
 
   main {
@@ -93,11 +109,12 @@ nav {
 }
 
 %card {
-  border: 1px solid #ddd;
+  margin-left: -$siteGap;
+  background: #ffffff;
   flex: 1 1 33%;
-  min-width: 360px;
+  min-width: $cardSize;
   padding: $siteGap;
-  margin-right: $siteGap;
+  margin-right: $siteGap * 2;
   margin-bottom: $siteGap;
 }
 
@@ -109,6 +126,8 @@ nav {
 
   .card {
     @extend %card;
+    display: block;
+    border: 0;
   }
 }
 
@@ -139,6 +158,7 @@ article {
     a {
       @extend %navLink;
       padding-left: 0;
+      margin-bottom: -$siteGap;
     }  
   }
 }
@@ -188,4 +208,8 @@ input {
   width: 70%;
   height: 28px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+img {
+  width: 100%;
 }

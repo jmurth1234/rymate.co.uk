@@ -21,11 +21,11 @@
 
       {{/* Range through the first $n_posts items of the section */}}
       <div class="item">
-        {{ range (first 3 $section) }}
+        {{ range (first 4 $section) }}
           {{ partial "summary.html" . }}
         {{ end }}
 
-        <a class="card" href='{{ "/posts" | relURL }}'>See More</a>
+        <a class="card" href='{{ "/posts" | relURL }}'>See More >></a>
       </div>
 
     </section>
@@ -37,10 +37,10 @@
 
       {{/* Range through the first $n_posts items of the section */}}
       <div class="item">
-        {{ range (first 3 (shuffle (.Site.Taxonomies.status.active))) }}
+        {{ range (first 4 (shuffle (.Site.Taxonomies.status.active))) }}
           {{ partial "project_summary.html" . }}
         {{ end }}
-        <a class="card" href='{{ "/projects" | relURL }}'>See All Projects</a>
+        <a class="card" href='{{ "/projects" | relURL }}'>See All Projects >></a>
       </div>
     </section>
 
