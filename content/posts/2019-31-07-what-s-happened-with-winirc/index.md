@@ -6,7 +6,7 @@ url: /2019/07/what-s-happened-with-winirc
 description: It's not dead, I've just been focusing on a different IRC client.
 ---
 
-So firstly -- WinIRC is not dead. I am still working on it, even if there's been no commits to the repo, I've still been working on fixes and new features in IrcClientCore, which will end up in WinIRC. Eventually, I hope to finish the current update for WinIRC, which although isn't the recode I mentioned in the last release, is a major decoupling of the IRC logic from WinIRC into IrcClientCore. It also has a number of UI tweaks including coloured nick names, and displaying the number of unread messages in the channels on the sidebar. This update is planned for later this year.
+So firstly -- WinIRC is not dead. I am still working on it, even if there's been no commits to the repo, I've still been working on fixes and new features in IrcClientCore, which will end up in WinIRC. Eventually, I hope to finish the current update for WinIRC, which although isn't the recode I mentioned in the last release, is a major decoupling of the IRC logic from WinIRC into IrcClientCore. It also has a number of UI tweaks including coloured nick names, and displaying the number of unread messages in the channels on the sidebar. This update is planned to happen soon.
 
 The reason I've not been working on it as much (apart from university / being employed) is a WIP project currently called Signal IRC. This is an IRC client based upon the same IrcClientCore library as WinIRC, but rather than running as a native UWP application, it's an ASP.NET web application. 
 
