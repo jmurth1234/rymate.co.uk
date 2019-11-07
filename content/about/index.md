@@ -18,6 +18,6 @@ ended up doing web development.
 
 Here's some other places you can find me:
 
-  * [My Github](http://github.com/rymate1234"http://github.com/rymate1234): All of my open source projects, plus some unfinished ideas
+  * [My Github](http://github.com/rymate1234): All of my open source projects, plus some unfinished ideas
   * [My twitter]( http://twitter.com/rymate1234): I occasionally tweet.
 
