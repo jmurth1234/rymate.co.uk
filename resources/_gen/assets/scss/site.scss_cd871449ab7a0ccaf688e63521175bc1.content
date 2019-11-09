@@ -58,7 +58,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  overflow: auto; }
+  overflow: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
 
 nav a {
   color: #fff;
@@ -68,8 +69,11 @@ nav a:hover {
   background: #1a237e; }
 
 #content {
-  padding-left: 10px;
-  margin-right: -20px; }
+  padding-left: 10px; }
+
+@media only screen and (min-width: 550px) {
+  #content {
+    margin-right: -20px; } }
 
 #content .homepage {
   max-width: 1280px;
@@ -87,8 +91,12 @@ nav a:hover {
   flex: 1 1 33%;
   min-width: 280px;
   padding: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+@media only screen and (min-width: 550px) {
+  .grid > .item .card, article {
+    margin-right: 20px; } }
 
 .grid > .item {
   display: flex;

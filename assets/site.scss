@@ -2,6 +2,7 @@ $headerBg: #1A237E;
 $navBg: #32408f;
 $siteGap: 10px;
 $cardSize: 280px;
+$shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
 * {
   box-sizing: border-box;
@@ -9,10 +10,6 @@ $cardSize: 280px;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
-}
-
-html {
-  overflow-x: hidden; 
 }
 
 body {
@@ -79,6 +76,7 @@ nav {
   top: 0;
   z-index: 10;
   overflow: auto;
+  box-shadow: $shadow;
 
   ul {
     @extend %flexNav;
@@ -97,7 +95,10 @@ nav {
 
 #content {
   padding-left: $siteGap;
-  margin-right: -$siteGap * 2;
+
+  @media only screen and (min-width: 550px) {
+    margin-right: -$siteGap * 2;
+  }
 
   .homepage {
     max-width: 1280px;
@@ -118,8 +119,12 @@ nav {
   flex: 1 1 33%;
   min-width: $cardSize;
   padding: $siteGap;
-  margin-right: $siteGap * 2;
   margin-bottom: $siteGap;
+  box-shadow: $shadow;
+
+  @media only screen and (min-width: 550px) {
+    margin-right: $siteGap * 2;
+  }
 }
 
 .grid > .item {
