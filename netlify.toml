@@ -2,3 +2,4 @@
 from = "/*"
 to = "https://jmurth.co.uk/:splat"
 status = 301
+force = true
